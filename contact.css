@@ -1,0 +1,216 @@
+/* RESET */
+
+/************ MOBILE **********/
+
+/****** HERO IMG *****/
+.hero-image-one {
+  background-image: linear-gradient(
+  rgba(255, 0, 0, 0.1),
+  rgba(255, 0, 0, 0.1)),
+  url("images/nature_small.WebP");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+}
+
+.hero-image-one .hero-text {
+  color: white;
+  text-align: center;
+}
+
+.hero-image-one .hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.hero-image-one .hero-text p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 0 5rem;
+  font-weight: lighter;
+}
+
+/* BUTTON */
+.button {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: .2rem;
+  margin-top: 2rem;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  background-color: #0A9396;
+  border: solid #300404 .1rem;
+}
+
+.button:hover {
+  background-color: #300404;
+}
+
+.button a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.button a:visited {
+  color: white;
+}
+
+.button:hover, .button:hover a:visited {
+  color: rgb(255, 255, 255);
+}
+
+/****** CONTACT FORM ******/
+
+#form-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 1.5rem 1rem;
+}
+
+#contact-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  background-color: #dad2bcd2;
+  max-width: 450px;
+}
+
+input[type=text], select, textarea {
+  padding: .2rem;
+  margin: .2rem 0;
+  border: 0.1rem solid rgba(110, 103, 103, 0.7);
+  border-radius: 0.2rem;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  height: 10vh;
+}
+
+/****** OUR EMPLOYEES ******/
+
+#emp-background {
+  display: flex;
+  justify-content: center;
+}
+
+#emp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 1.5rem;
+  background-color: #dad2bcd2;
+  border-radius: 0.2rem;
+  padding: 1rem 0;
+  max-width: 450px;
+}
+
+#emp-one {
+  margin: 1rem 1rem;
+  padding: .2rem;
+  text-align: center;
+  border-radius: 0.2rem;
+}
+
+#emp-two {
+  margin: 1rem 1rem;
+  padding: .2rem;
+  text-align: center;
+  border-radius: 0.2rem;
+}
+
+.img-employee {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.1rem;
+  vertical-align: middle;
+}
+
+.emp-text {
+  font-size: .8rem;
+  padding: 1.5rem .8rem;
+  background-color: #424242d6;
+  color: rgb(255, 255, 255);
+  border-radius: 0.1rem;
+}
+
+/****** IMG *****/
+.image-banner{
+  width: 100%;
+  object-fit: cover;
+  margin-top: 1rem;
+  max-height: 30vh;
+  vertical-align: middle;
+}
+
+
+/************* DESKTOP ************/
+
+@media screen and (min-width: 750px) {
+  /****** HERO IMG ******/
+  .hero-image-one {
+    background-image: linear-gradient(
+    rgba(255, 0, 0, 0.1),
+    rgba(255, 0, 0, 0.1)),
+    url("images/nature_large.WebP");
+    background-position: center bottom;
+    height: 50vh;
+  }
+
+  .hero-image-one .hero-text p {
+    font-size: 1.7rem;
+  }
+
+  /****** CONTACT FORM ******/
+  #contact-container {
+    max-width: 700px;
+    padding: 1rem 2rem;
+  }
+
+  input[type=text], select, textarea {
+    padding: .5rem;
+  }
+
+  /****** OUR EMPLOYEES ******/
+  #emp-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "h2 h2"
+    "emp-one emp-two";
+    max-width: 700px;
+    padding: 1rem 2rem;
+  }
+
+  #emp-container h2 {
+    grid-area: h2;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  #emp-one {
+    grid-area: emp-one;
+  }
+
+  #emp-two {
+    grid-area: emp-two;
+  }
+
+  /******  IMG  ******/
+  .image-banner {
+    max-height: 40vh;
+    vertical-align: middle;
+  }
+}

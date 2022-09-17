@@ -1,0 +1,184 @@
+/* RESET */
+
+* {
+  /* box-sizing so that padding doesnt take up the width */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #300404;
+  background-color: #0A9396;
+  border-radius: 5px;
+  border: solid #656f83d0 .1rem;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  opacity: 0.7;
+  color: #fff;
+}
+
+
+/**** MOBILE ****/
+/* MAIN */
+#hero-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  flex: 1 0 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(images/lofoten_landing_hero2_small.webp) center center/cover;
+  position: relative;
+}
+
+.hero h2 {
+  color: #57FFC6;
+}
+
+.hero p {
+  color: #f5f1ed;
+}
+
+.hero-txt {
+  background: rgba(71, 71, 71, 0.8);
+  border-radius: 0.1rem 5rem 1rem;
+}
+
+/* Overlay */
+.hero::before {
+content: "";
+/* When having pos absolute the parent has to be pos relative see .hero */
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(61, 70, 155, 0.3);
+}
+
+/* Anything in .hero get z index of 10 meaning higher z index closer to me/screen */
+.hero * {
+z-index: 10;
+}
+
+.hero-txt {
+padding: 1rem;
+margin: 1rem;
+text-align: center;
+font-weight: 400;
+font-size: 5vw;
+}
+
+
+#content-container{
+display: flex;
+flex-direction: column;
+}
+
+.hike {
+  flex: 1 0 32vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: url(images/hike_small.webp) center center/cover;
+  border-top: .1rem solid #635535;
+}
+
+.eat {
+  flex: 1 0 32vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: url(images/eat_small.webp) center center/cover;
+  border-top: .1rem solid #635535;
+}
+
+.sleep {
+  flex: 1 0 32vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: url(images/live_small.webp) center center/cover;
+  border-top: .1rem solid #635535;
+  border-bottom: .1rem solid #635535;
+}
+
+.hike-txt, .sleep-txt, .eat-txt {
+  padding: 2vh 4vw;
+  margin: 3vh;
+  color: #fff;
+  border-radius: 5px;
+  background: rgba(71, 71, 71, 0.8);
+  border-radius: 0.1rem 5rem 1rem;
+}
+
+
+
+/*****************
+
+TABLET / DESKTOP
+
+*****************/
+
+@media (min-width: 750px) {
+  /* MAIN */
+  #content-container{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+  }
+
+  .hero {
+    background: url(images/lofoten_landing_hero2_large.webp) center center/cover;
+  }
+  .hike {
+    background: url(images/hike_large.webp) center center/cover;
+  }
+  .eat {
+    background: url(images/eat_large.webp) center center/cover;
+  }
+  .sleep {
+    background: url(images/live_large.webp) center center/cover;
+  }
+
+  .hike, .eat, .sleep {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  }
+
+  .hike-txt{
+  padding: 2vw 2vh;
+  margin: 10rem 0 0 0;
+  text-align: center;
+  align-self: flex-start;
+  }
+
+  .eat-txt{
+  padding: 2vw 2vh;
+  margin: 1px;
+  text-align: center;
+  align-self: center;
+  }
+
+  .sleep-txt{
+  padding: 2vw 2vh;
+  margin: 0 0 10rem 0;
+  text-align: center;
+  align-self: flex-end;
+  }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact page">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="shared.css">
+  <title>Contact - LofotenTrek</title>
+</head>
+
+<body>
+
+  <!-- ****** NAVBAR ****** -->
+  <nav>
+    <section class="nav">
+      <div class="logo">
+        <h1><span>Lofoten</span>Trek</h1>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#Hike">Hike</a></li>
+          <li><a href="#Eat">Eat</a></li>
+          <li><a href="#Live">Live</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </nav>
+
+  <main>
+    <!-- ****** HERO IMG ****** -->
+    <section class="hero-image-one">
+      <div class="hero-text">
+        <h1>Hey!</h1>
+        <p>We are so happy to see YOU here.</p>
+        <button class="button">
+          <a href="#form-background">Get in touch</a>
+        </button>
+      </div>
+    </section>
+
+    <!-- ****** CONTACT FORM ****** -->
+    <section id="form-background">
+      <div id="contact-container">
+        <h2>Contact Form</h2>
+        <form>
+          <label>
+            <input name="first-name" type="text" placeholder="Your name..">
+          </label>
+
+          <label>
+            <input name="last-name" type="text" placeholder="Your last name..">
+          </label>
+
+          <select name="subject">
+            <option value="hike">Hike</option>
+            <option value="eat">Eat</option>
+            <option value="live">Live</option>
+          </select>
+
+          <textarea name="message" placeholder="Message.."></textarea>
+
+          <button class="button">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ****** OUR EMPLOYEES ****** -->
+    <section id="emp-background">
+      <div id="emp-container">
+        <h2>Meet our staff</h2>
+        <section id="emp-one">
+          <div class="img-employee">
+            <picture>
+              <source srcset="images/alexander_large.WebP" media="(min-width: 750px)">
+              <img class="img-employee" src="images/alexander_small.WebP" alt="Alexander employee">
+            </picture>
+          </div>
+          <div class="emp-text">
+            <h3>Alexander Caspersson</h3>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quas ullam quasi necessitatibus neque.
+              Fuga alias possimus est iusto harum necessitatibus voluptate fugit et ut reprehenderit dolores ducimus,
+              molestias eius!
+            </p>
+          </div>
+        </section>
+
+        <section id="emp-two">
+          <div class="img-employee">
+            <picture>
+              <source srcset="images/amelia_large.WebP" media="(min-width: 750px)">
+              <img class="img-employee" src="images/amelia_small.WebP" alt="Amelia employee">
+            </picture>
+          </div>
+          <div class="emp-text">
+            <h3>Amelia Andreasson</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur labore dicta quas ipsam dolores,
+              doloremque esse voluptatum fugiat, natus iure a asperiores veritatis similique sint non? Dolores impedit
+              accusantium esse.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ****** IMG ****** -->
+    <picture>
+      <source srcset="images/trolltunga_large.WebP" media="(min-width: 750px)">
+      <img class="image-banner" src="images/trolltunga_small.WebP" alt="Trolltunga view">
+    </picture>
+  </main>
+
+  <!-- ****** FOOTER ****** -->
+  <footer class="footer">
+    <div class="foot-txt">
+      <p>Lofoten Trek | © 2021, All rights reserved</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
